@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="CloudSyncPulse.BackgroundTask/CloudSyncPulse.BackgroundTask.csproj" />
+  <Project Path="CloudSyncPulse.Core/CloudSyncPulse.Core.csproj" />
+  <Project Path="CloudSyncPulse.DataAccess.Sqlite/CloudSyncPulse.DataAccess.Sqlite.csproj" />
+  <Project Path="CloudSyncPulse.Web/CloudSyncPulse.Web.csproj" />
+</Solution>
