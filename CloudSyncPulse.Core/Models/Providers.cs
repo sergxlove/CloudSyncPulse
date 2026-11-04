@@ -39,5 +39,24 @@ namespace CloudSyncPulse.Core.Models
                 UpdatedUtc = now
             });
         }
+
+        public static Providers Restore(
+            Guid id,
+            ProviderType type,
+            string displayName,
+            bool isEnabled,
+            DateTime createdUtc,
+            DateTime updatedUtc)
+        {
+            return new Providers
+            {
+                Id = id,
+                Type = type,
+                DisplayName = displayName ?? string.Empty,
+                IsEnabled = isEnabled,
+                CreatedUtc = createdUtc,
+                UpdatedUtc = updatedUtc
+            };
+        }
     }
 }
