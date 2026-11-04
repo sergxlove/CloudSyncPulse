@@ -35,5 +35,34 @@ namespace CloudSyncPulse.Core.Models
                 Trigger = trigger
             });
         }
+
+        public static SyncRun Restore(
+           Guid id,
+           Guid syncRuleId,
+           DateTime startedUtc,
+           DateTime? finishedUtc,
+           SyncRunStatus status,
+           SyncRunTrigger trigger,
+           int filesTotal,
+           int filesSucceeded,
+           int filesFailed,
+           long bytesUploaded,
+           string? errorMessage)
+        {
+            return new SyncRun
+            {
+                Id = id,
+                SyncRuleId = syncRuleId,
+                StartedUtc = startedUtc,
+                FinishedUtc = finishedUtc,
+                Status = status,
+                Trigger = trigger,
+                FilesTotal = filesTotal,
+                FilesSucceeded = filesSucceeded,
+                FilesFailed = filesFailed,
+                BytesUploaded = bytesUploaded,
+                ErrorMessage = errorMessage
+            };
+        }
     }
 }

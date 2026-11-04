@@ -42,5 +42,26 @@ namespace CloudSyncPulse.Core.Models
                 UpdatedUtc = DateTime.UtcNow
             });
         }
+
+        public static ProviderCredential Restore(
+            Guid providerId,
+            byte[] accessTokenEncrypted,
+            byte[]? refreshTokenEncrypted,
+            DateTime? expiresAtUtc,
+            string? scope,
+            string? tokenType,
+            DateTime updatedUtc)
+        {
+            return new ProviderCredential
+            {
+                ProviderId = providerId,
+                AccessTokenEncrypted = accessTokenEncrypted ?? Array.Empty<byte>(),
+                RefreshTokenEncrypted = refreshTokenEncrypted,
+                ExpiresAtUtc = expiresAtUtc,
+                Scope = scope,
+                TokenType = tokenType,
+                UpdatedUtc = updatedUtc
+            };
+        }
     }
 }

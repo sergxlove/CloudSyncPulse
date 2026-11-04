@@ -73,5 +73,42 @@ namespace CloudSyncPulse.Core.Models
                 IsDeleted = false
             });
         }
+
+        public static SyncRules Restore(
+            Guid id,
+            string name,
+            bool enabled,
+            string localPath,
+            LocalPathType localPathType,
+            bool recursive,
+            Guid providerId,
+            string remoteFolder,
+            string? remoteFileNameTemplate,
+            OverwritePolicy overwritePolicy,
+            bool deleteAfterUpload,
+            string cron,
+            DateTime? lastRunUtc,
+            DateTime? nextRunUtc,
+            bool isDeleted)
+        {
+            return new SyncRules
+            {
+                Id = id,
+                Name = name ?? string.Empty,
+                Enabled = enabled,
+                LocalPath = localPath ?? string.Empty,
+                LocalPathType = localPathType,
+                Recursive = recursive,
+                ProviderId = providerId,
+                RemoteFolder = string.IsNullOrWhiteSpace(remoteFolder) ? "/" : remoteFolder,
+                RemoteFileNameTemplate = remoteFileNameTemplate,
+                OverwritePolicy = overwritePolicy,
+                DeleteAfterUpload = deleteAfterUpload,
+                Cron = cron ?? "0 0 * * *",
+                LastRunUtc = lastRunUtc,
+                NextRunUtc = nextRunUtc,
+                IsDeleted = isDeleted
+            };
+        }
     }
 }

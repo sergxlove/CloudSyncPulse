@@ -26,5 +26,15 @@ namespace CloudSyncPulse.Core.Models
                 PasswordHash = passwordHash
             });
         }
+
+        public static Users Restore(Guid id, string username, string passwordHash)
+        {
+            return new Users
+            {
+                Id = id,
+                Username = username ?? string.Empty,
+                PasswordHash = passwordHash ?? string.Empty
+            };
+        }
     }
 }
