@@ -2,5 +2,6 @@
   <Project Path="CloudSyncPulse.BackgroundTask/CloudSyncPulse.BackgroundTask.csproj" />
   <Project Path="CloudSyncPulse.Core/CloudSyncPulse.Core.csproj" />
   <Project Path="CloudSyncPulse.DataAccess.Sqlite/CloudSyncPulse.DataAccess.Sqlite.csproj" />
+  <Project Path="CloudSyncPulse.Tests/CloudSyncPulse.Tests.csproj" Id="8c4f25a1-e4ba-4b32-89cf-e4b75d00dd28" />
   <Project Path="CloudSyncPulse.Web/CloudSyncPulse.Web.csproj" />
 </Solution>
